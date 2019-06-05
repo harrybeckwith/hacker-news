@@ -48,6 +48,13 @@ class App extends React.Component {
         .catch(error => console.error(error));
     }
   };
+
+  loadMore = () => {
+    const totalItems = this.state.stories.length;
+
+    console.log(totalItems);
+  };
+
   render() {
     return (
       <div className="top-stories">
@@ -65,6 +72,7 @@ class App extends React.Component {
             />
           ))}
         </div>
+        <div onClick={this.loadMore}>More</div>
       </div>
     );
   }
